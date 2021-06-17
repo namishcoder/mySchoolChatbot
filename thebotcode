@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<center>
+  <div style="height: 99.5%; width: 70%; margin-top:0%; margin-left:0%;" id="webchat" role="main"></div>
+</center>
+  <script>
+     
+     // Set  the CSS rules.
+     const styleSet = window.WebChat.createStyleSet({
+         bubbleBackground: 'rgba(0, 72, 255, .1)',
+         bubbleFromUserBackground: 'rgba(0, 255, 0, .1)',
+         rootHeight: '90%',
+         rootWidth: '100%',
+         backgroundColor: 'paleturquoise'
+      });
+
+      // After generated, you can modify the CSS rules.
+      // Change font family and weight. 
+      styleSet.textContent = {
+         ...styleSet.textContent,
+      };
+
+    // Set the avatar options. 
+     const avatarOptions = {
+         botAvatarImage: "https://lh6.googleusercontent.com/NvMrjeAe22mSKKNXFluMi_gouxKtsjPOdW_Jlffo30-wS2f4v6UpTudDOQjWAka7FmZ9CpDhmF012WExQZd_MaK0DpBWBfNv7KWLFLFsrT430tOiXdzZcohQ7jAD9kE9uA=w1280",
+   botAvatarInitials: 'Bot',
+   userAvatarInitials: 'User'   	 
+         };
+
+    window.WebChat.renderWebChat({
+      directLine: window.WebChat.createDirectLine({
+          token: 'Q9XI8fLvWwo.uCGnQMsxSEUR8YyLafno6sF39GwuGzMabcDEtrovQdU'}),
+      styleSet,
+      styleOptions: avatarOptions
+    }, document.getElementById('webchat'));
+    
+  </script>
+</body>
