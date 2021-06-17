@@ -53,5 +53,5 @@ jobs:
       with:
         app-name: 'mySchoolChatbot'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b552c5c6960148e3a0bfb6dbfe4e5451 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a6994637f302404ea06a964d05d7f700 }}
         package: .
